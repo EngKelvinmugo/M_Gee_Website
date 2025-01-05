@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"  // Import Image from next/image for optimization
 
 const blogPosts = [
   {
@@ -40,7 +41,13 @@ export default function BlogPage() {
             </CardHeader>
             <CardContent>
               <div className="mb-4">
-                <img src={post.image} alt={post.title} className="w-full h-48 object-cover rounded-lg" />
+                <Image 
+                  src={post.image} 
+                  alt={post.title} 
+                  className="w-full h-48 object-cover rounded-lg" 
+                  width={600} 
+                  height={300}  // Set appropriate width and height for optimization
+                />
               </div>
               <p className="text-muted-foreground mb-4">{post.excerpt}</p>
               <div className="flex justify-between items-center">
