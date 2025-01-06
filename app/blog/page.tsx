@@ -41,7 +41,7 @@ export default function BlogPage() {
             </CardHeader>
             <CardContent>
               <div className="mb-4">
-                <Image 
+                <img
                   src={post.image} 
                   alt={post.title} 
                   className="w-full h-48 object-cover rounded-lg" 
